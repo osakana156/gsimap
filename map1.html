@@ -58,7 +58,11 @@
 <noscript><div class="noscript">JavaScriptを有効にしてご覧ください。</div></noscript>
 <script type="text/javascript" src="easy-gsimap.js"></script>
 <script>"use strict";
-
+window.onload = function() {
+    var map = initMap('mapid')
+    map.setZoom(4)
+    map.panTo([35.943560,136.188917])
+}
 CONFIG.DEFAULT = { CENTER : [ 35.943560, 136.188917 ], ZOOM : 5 };
 
 const gsimap_init = function(map, layer) {
